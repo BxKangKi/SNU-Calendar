@@ -80,7 +80,7 @@ def get_content(cal, soup, date):
       vevent.add('description').value = c.desc
       vevent.add('summary').value = c.desc
       vevent.add('dtstart').value = datetime(c.date_a.year, c.date_a.month, c.date_a.day, 0, 0, 0).astimezone(tz).date()
-      vevent.add('dtend').value = datetime(c.date_b.year, c.date_b.month, c.date_b.day, 0, 0, 0).astimezone(tz).date()
+      vevent.add('dtend').value = datetime(c.date_b.year, c.date_b.month, c.date_b.day, 23, 59, 59).astimezone(tz).date()
       c.print()
   return cal
 
